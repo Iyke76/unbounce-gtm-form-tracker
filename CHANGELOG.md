@@ -1,5 +1,18 @@
 # Changelog
 
+## 3.3.0 (2026-11-06)
+
+Rebuilt from the universal tracker v3.3.0. Existing event names and keys are unchanged, so current triggers and variables keep working.
+
+- `ec_first_name`, `ec_last_name`, `ec_company`, `ec_street`, `ec_city`, `ec_region`, `ec_postal_code` and `ec_country`
+- Phone validation to E.164, with `defaultCountryCode` and `countryCodeField`
+- Consent queue: events raised while analytics consent is denied replay when it is granted
+- First and last touch attribution with click IDs
+- Failure diagnostics: `ec_submit_attempt`, `ec_time_to_submit_s`, `ec_fast_submit`, `ec_failed_fields`
+- `strictSuccess` to drop inferred successes
+- `rawFields` and `redactFields`. The GTM file now ships `rawFields: false`, so `ec_raw_fields` is off unless you turn it on
+- Password, card, SSN and IBAN style field names are always stripped
+
 ## 3.0.1
 
 Initial standalone Unbounce release prepared for public GitHub publishing.
